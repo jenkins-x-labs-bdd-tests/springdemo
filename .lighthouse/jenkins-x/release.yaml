@@ -40,10 +40,11 @@ spec:
           name: build-mvn-deploy
           resources: {}
           script: |
-            #!/bin/sh
+            #!/usr/bin/env bash
             source .jx/variables.sh
 
             # modify the pom.xml
+            echo "upgrading the pom to version $VERSION"
             mvn versions:set -DnewVersion=$VERSION
 
             mvn --no-transfer-progress clean deploy
