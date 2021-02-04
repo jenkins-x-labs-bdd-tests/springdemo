@@ -36,18 +36,8 @@ spec:
           resources: {}
         - name: jx-variables
           resources: {}
-        - image: maven:3.6-openjdk-11
-          name: build-mvn-deploy
+        - name: build-mvn-deploy
           resources: {}
-          script: |
-            #!/usr/bin/env bash
-            source .jx/variables.sh
-
-            # modify the pom.xml
-            echo "upgrading the pom to version $VERSION"
-            mvn versions:set -DnewVersion=$VERSION
-
-            mvn --no-transfer-progress clean deploy
         - name: build-container-build
           resources: {}
         - name: promote-changelog
