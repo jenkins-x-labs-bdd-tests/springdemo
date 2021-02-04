@@ -16,7 +16,7 @@ spec:
             value: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true
               -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4
               -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
-          image: uses:jenkins-x/jx3-pipeline-catalog/tasks/maven-java11/pullrequest.yaml@bc365194521400ce6be0d2904189aeab4bee0cd1
+          image: uses:jenkins-x/jx3-pipeline-catalog/tasks/maven-java11/pullrequest.yaml@92f0e419fc1e4d4c78f6961876fd2baec57e6569
           name: ""
           resources:
             requests:
@@ -24,7 +24,7 @@ spec:
               memory: 512Mi
           workingDir: /workspace/source
         steps:
-        - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@bc365194521400ce6be0d2904189aeab4bee0cd1
+        - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@92f0e419fc1e4d4c78f6961876fd2baec57e6569
           name: ""
           resources: {}
         - name: jx-variables
